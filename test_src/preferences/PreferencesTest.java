@@ -25,6 +25,11 @@ public class PreferencesTest extends TestCase {
     _preferences.removeNode();
   }
 
+  // On Windows, these preferences are saved in the
+  // Registry in HKCU/JavaSoft/Prefs/
+  // On Linux, these are saved in ~/.java
+  // For more info check this webpage:
+  // http://mindprod.com/jgloss/preferences.html
   @Test
   public void testWritingAndReadingAnIntWhenKeyExists() {
     int intValue = 5;
