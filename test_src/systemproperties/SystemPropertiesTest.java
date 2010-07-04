@@ -4,18 +4,21 @@ import java.util.Properties;
 
 import junit.framework.TestCase;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class SystemPropertiesTest extends TestCase {
 
-  @Test
-  public void testCreation() {
-    Properties properties = System.getProperties();
+  private Properties _properties;
+
+  @Before
+  @Override
+  public void setUp() {
+    _properties = System.getProperties();
   }
 
   @Test
-  public void testListProperties() {
-    Properties properties = System.getProperties();
-    properties.list( System.out );
+  public void testListingProperties() {
+    _properties.list( System.out );
   }
 }
