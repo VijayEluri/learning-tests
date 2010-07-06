@@ -1,5 +1,9 @@
 package uuid;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertThat;
+
 import java.util.UUID;
 
 import junit.framework.TestCase;
@@ -18,7 +22,7 @@ public class UuidTest extends TestCase {
   public void testRandomIdentifier() {
     UUID uuid1 = UUID.randomUUID();
     UUID uuid2 = UUID.randomUUID();
-    assertTrue( !uuid1.equals( uuid2 ) );
+    assertThat( uuid1, is( not( uuid2 ) ) );
   }
 
   @Test
