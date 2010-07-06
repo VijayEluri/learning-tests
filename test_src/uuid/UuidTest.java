@@ -11,6 +11,7 @@ public class UuidTest extends TestCase {
   @Test
   public void testCreation() {
     UUID uuid = new UUID( Long.MAX_VALUE, Long.MIN_VALUE );
+    assertNotNull( uuid );
   }
 
   @Test
