@@ -1,4 +1,4 @@
-package dumbtest;
+package interview;
 
 import junit.framework.TestCase;
 
@@ -16,32 +16,32 @@ public class FizzBuzzTest extends TestCase {
   }
 
   @Test
-  public void testWithOne() {
+  public void testWithOneShouldBeOne() {
     assertEquals( 1, _fizzBuzz.isFizzOrBuzz( 1 ) );
   }
 
   @Test
-  public void testWithThree() {
+  public void testWithThreeShouldBeFizz() {
     assertEquals( "Fizz", _fizzBuzz.isFizzOrBuzz( 3 ) );
   }
 
   @Test
-  public void testWithFive() {
+  public void testWithFiveShouldBeBuzz() {
     assertEquals( "Buzz", _fizzBuzz.isFizzOrBuzz( 5 ) );
   }
 
   @Test
-  public void testWithFifteen() {
+  public void testWithFifteenShouldBeFizzBuzz() {
     assertEquals( "FizzBuzz", _fizzBuzz.isFizzOrBuzz( 15 ) );
   }
 
   @Test
-  public void testWithTwenty() {
+  public void testWithTwentyShouldBeBuzz() {
     assertEquals( "Buzz", _fizzBuzz.isFizzOrBuzz( 20 ) );
   }
 
   @Test
-  public void testWithForty() {
+  public void testWithFortyShouldBeBuzz() {
     assertEquals( "Buzz", _fizzBuzz.isFizzOrBuzz( 40 ) );
   }
 }

@@ -1,4 +1,4 @@
-package dumbtest;
+package interview;
 
 public class FizzBuzz {
 
