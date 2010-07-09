@@ -1,26 +1,24 @@
 package preferences;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
-
-import junit.framework.TestCase;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PreferencesTest extends TestCase {
+public class PreferencesTest {
 
   private Preferences _preferences;
 
   @Before
-  @Override
   public void setUp() {
     _preferences = Preferences.userNodeForPackage( this.getClass() );
   }
 
   @After
-  @Override
   public void tearDown() throws BackingStoreException {
     _preferences.removeNode();
   }

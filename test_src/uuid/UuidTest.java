@@ -2,15 +2,14 @@ package uuid;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
 import java.util.UUID;
 
-import junit.framework.TestCase;
-
 import org.junit.Test;
 
-public class UuidTest extends TestCase {
+public class UuidTest {
 
   @Test
   public void testCreation() {
@@ -29,6 +28,6 @@ public class UuidTest extends TestCase {
   public void testCompareIdentifierWithString() {
     UUID uuid = UUID.randomUUID();
     String uuidString = uuid.toString();
-    assertEquals( uuid, UUID.fromString( uuidString ) );
+    assertThat( uuid, is( UUID.fromString( uuidString ) ) );
   }
 }

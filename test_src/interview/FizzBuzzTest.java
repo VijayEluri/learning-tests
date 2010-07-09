@@ -1,16 +1,15 @@
 package interview;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class FizzBuzzTest extends TestCase {
+public class FizzBuzzTest {
 
   private FizzBuzz _fizzBuzz;
 
   @Before
-  @Override
   public void setUp() {
     _fizzBuzz = new FizzBuzz();
   }
