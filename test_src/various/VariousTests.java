@@ -17,9 +17,9 @@ public class VariousTests {
 
   @Test
   public void testStringValueOfOnPrimitiveInteger() {
-    assertEquals( String.valueOf( 1 ), "1" );
-    assertEquals( String.valueOf( 5 ), "5" );
-    assertEquals( String.valueOf( 100 ), "100" );
-    assertEquals( String.valueOf( 666 ), "666" );
+    assertEquals( "1", String.valueOf( 1 ) );
+    assertEquals( "5", String.valueOf( 5 ) );
+    assertEquals( "100", String.valueOf( 100 ) );
+    assertEquals( "666", String.valueOf( 666 ) );
   }
 }
