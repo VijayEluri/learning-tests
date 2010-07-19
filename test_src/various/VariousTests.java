@@ -1,6 +1,9 @@
 package various;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -21,5 +24,11 @@ public class VariousTests {
     assertEquals( String.valueOf( 5 ), "5" );
     assertEquals( String.valueOf( 100 ), "100" );
     assertEquals( String.valueOf( 666 ), "666" );
+  }
+
+  @Test
+  public void testConvertionFromArrayOfCharsToString() {
+    char[] chars = new char[] { 'a', 'b' };
+    assertThat( chars.toString(), is( not( "ab" ) ) );
   }
 }
