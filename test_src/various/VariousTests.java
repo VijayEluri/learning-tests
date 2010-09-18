@@ -33,7 +33,7 @@ public class VariousTests {
 	}
 
 	@Test
-	public void testSomething() {
+	public void testOperatorPrecedence() {
 		int x = 2;
 		int y = 3;
 		assertThat(x + y + "x + y" + x + y, is("5x + y23"));
