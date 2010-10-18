@@ -26,7 +26,7 @@ public class VariousTests {
 	}
 
 	@Test
-	public void testConvertionFromArrayOfCharsToString() {
+	public void testConversionFromArrayOfCharsToString() {
 		char[] chars = new char[] {
 				'a', 'b' };
 		assertThat(chars.toString(), is(not("ab")));
