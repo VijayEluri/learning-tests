@@ -9,8 +9,7 @@ public class VariousTests {
 
 	@Test
 	public void testIntegerUnboxingUsingObjects() {
-		Object[] arrayOfIntegers = new Object[] {
-				1, 2, 3 };
+		Object[] arrayOfIntegers = new Object[] { 1, 2, 3 };
 
 		assertEquals(arrayOfIntegers[0], 1);
 		assertEquals(arrayOfIntegers[1], 2);
@@ -27,8 +26,7 @@ public class VariousTests {
 
 	@Test
 	public void testConversionFromArrayOfCharsToString() {
-		char[] chars = new char[] {
-				'a', 'b' };
+		char[] chars = new char[] { 'a', 'b' };
 		assertThat(chars.toString(), is(not("ab")));
 	}
 
@@ -37,5 +35,18 @@ public class VariousTests {
 		int x = 2;
 		int y = 3;
 		assertThat(x + y + "x + y" + x + y, is("5x + y23"));
+	}
+
+	@Test
+	public void swapReferences() {
+		Various v = new Various();
+		String a = "a";
+		String b = "b";
+		v.swapReferences(a, b);
+		// values won't be swapped because
+		// java is pass by value
+		// not by reference
+		assertEquals("a", a);
+		assertEquals("b", b);
 	}
 }
